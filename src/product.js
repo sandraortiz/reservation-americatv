@@ -22,7 +22,7 @@ const writeFirebas = (data) =>{
   <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
   <label class="custom-control-label" for="customRadio3">${data.productos[2]}</label>
 </div>
-<button>Continuar</button>
+<button onclick="producto()" >Continuar</button>
  
 `
 }
@@ -31,4 +31,8 @@ const callFirebaseAllPosts = (uid) => {
 refPost.on('value' , (snap) => {
   writeFirebas(snap.val()[uid])
   })
+}
+
+const producto = () => {
+  window.location = 'index.html'
 }

@@ -1,24 +1,30 @@
 const btnModal = document.getElementById("btnModal");
+
 const itemsSelects = [];
 const programa = document.getElementById("programas");
-const saveItemsFirebase = () =>
-  new Promise((reject, resolve) => {
-    if (itemsSelects[0]) {
-      itemsSelects.forEach(elem => {
-        console.log(elem.ruta);
-        firebase
-          .database()
-          .ref(elem.ruta)
-          .update({ disponible: "false", marca: infoUser.producto });
-      }),
-        resolve("");
-    }
-  });
-document.getElementById("saveItems").addEventListener("click", () => {
-  saveItemsFirebase().then(() => {
-    location.reload();
-  });
+const item = document.getElementById("saveItems");
+
+// const saveItemsFirebase = () =>
+//   new Promise((reject, resolve) => {
+//     if (itemsSelects[0]) {
+//       itemsSelects.forEach(elem => {
+//         console.log(elem.ruta);
+//         firebase
+//           .database()
+//           .ref(elem.ruta)
+//           .update({ disponible: "false", marca: infoUser.producto });
+//       }),
+//         resolve("");
+//     }
+//   });
+item.addEventListener("click", () => {
+window.location = 'confirm.html'
+  // saveItemsFirebase().then(() => {
+  //   location.reload();
+  // });
 });
+
+
 btnModal.addEventListener("click", () => {
   const arrayItemsReservados = itemsSelects.map(
     elem =>
@@ -44,14 +50,19 @@ btnModal.addEventListener("click", () => {
   document.getElementById(
     "modalBody"
   ).innerHTML += `<ul class="list-group">${templateReservas}
-</ul>`;
+</ul>
+<button onclick='confirm()'> CONFIRMAR<button>
+`;
 });
 const infoUser = {
   name: "Marcos Rojas",
   nameEmpresa: "Circus",
   producto: "Coca Cola"
 };
+const confirm = () => {
+  window.location = 'confirm.html'
 
+}
 var programación = firebase.database().ref("programación");
 programación.on("value", function(snapshot) {
   showDia(snapshot.val());

@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Skranji');
 
 /* Home html */
-
+body{
+    background-image: url("../img/background.png")
+}
 
 
 .register{
