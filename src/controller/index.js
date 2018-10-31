@@ -67,10 +67,10 @@ const showDia = snap => {
         const select = `<select data-programa="${element.programa}" data-día="${item}" data-monto="${element.monto}" data-recarga="${element.recarga || 00}" class="intervals">     
         <option value="" disabled selected>Seleccione</option>
         ${stringOption}</select>`;
-        return ` <li class="list-group-item" data-dia="${item}" data-index="${index}" data-programa="${element.programa}"  
+        return ` <li class="list-group-item " data-dia="${item}" data-index="${index}" data-programa="${element.programa}"  
         class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
         <div class=" bd-highlight ">
-          <div class="mr-auto bd-highlight">${element.programa}</div>
+          <div class="mr-auto bd-highlight ">${element.programa}</div>
           <div class="bd-highlight">
             <p class="card-text">
               <small class="text-muted">${element.time}</small>
@@ -82,23 +82,20 @@ const showDia = snap => {
             </p>
           </div>
         </div>
-      </li>
-      `;
+      </li>`;
       });
-      programa.innerHTML += `
-       <div class="col-12 col-md-2 mt-2 ">
-   
-      <table>
-    <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">${item}</th>
-      
-    </tr>
-  </thead>
-      </table>
-      
-     
+      programa.innerHTML += `<div class="col-12 col-md-2 mt-2 my-0">
+    <div class="row">  
+    <div class="col-12 p-0 bg-dark text-white text-center  border-r">
+    <h3 class=""> ${item}</h3>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-12 p-0">
+      <ul class="list-group">${arrayTemplateProgramming.join("")} 
+    </ul>
+     </div>
+     </div>
      </div>`;
     }, resolve(document.getElementsByClassName('intervals')));
   })
