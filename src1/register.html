@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="register.css">
+</head>
+
+<body></body>
+<div class="container d-flex h-100">
+  <div class="row align-self-center w-100">
+    <div class="col-6 mx-auto">
+       <button id="login" disabled>login</button>
+        <button id="register">register</button>
+
+        <div id="registerForm">
+<div class="jumbotron">
+ 
+<form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Agencia</label>
+              <input type="email" class="form-control" id="agencia" aria-describedby="emailHelp" placeholder="ingrese sua agencia">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="passwordVerification" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <input type='text' id='idea' />
+
+              <input type='button' value='add to list' id='add' placeholder="productos">
+              <ul id='list'></ul>
+
+            </div>
+            
+            <button class="btn btn-primary">Submit</button>
+            <button  id="registers" class="btn btn-primary">Submi+st</button>
+
+          </form>
+</div>
+        </div>
+
+        
+        <div id="loginForm">
+      <div class="jumbotron">
+                <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck2">
+              <label class="form-check-label" for="exampleCheck1s">Check me out</label>
+            </div>
+            <button class="btn btn-primary">Submit</button>
+          
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+  crossorigin="anonymous"></script>
+<script src="register.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script src="./model/call-firebase.js"></script>
+</body>
+
+</html>
